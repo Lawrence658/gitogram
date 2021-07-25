@@ -2,7 +2,7 @@
     <header>
         <div class="container">
             <slot name="topline" />
-            <slot name="content" />
+            <slot name="users" />
         </div>
     </header>
 </template>

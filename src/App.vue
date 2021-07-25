@@ -3,8 +3,19 @@
         <template #topline>
             <Topline></Topline>
         </template>
-        <template #content>
-            <Content :users="users"></Content>
+        <template #users>
+            <div class="users-wrap">
+                <ul class="users-list">
+                    <li v-for="user in users" :key="user.id">
+
+                    </li>
+
+
+                    <!-- <li v-for="user in users" :key="user.id">
+                        <StoryUserItem :user="user"></StoryUserItem>
+                    </li> -->
+                </ul>
+            </div>
         </template>
     </Header>
     <main>
@@ -13,9 +24,9 @@
 </template>
 
 <script>
-import Header from '@/components/Header/Header'
-import Topline from '@/components/Header/Topline'
-import Content from '@/components/Header/Content'
+import Header from '@/components/header/Header'
+import Topline from '@/components/header/Topline'
+import Content from '@/components/header/Content'
 
 import users from '@/assets/json/users.json'
 
