@@ -1,12 +1,14 @@
-import Icon from './Icon.vue'
+import icon from './icon.vue'
 export default {
-    title: 'Icon',
-    components: { Icon }
+    title: 'icon',
+    components: { icon }
 }
 
 export const defaultView = () => ({
-    components: { Icon },
+    components: { icon },
     template: `
-        <Icon />
+        <icon
+            name="home"
+        />
     `
 })
