@@ -1,5 +1,3 @@
-# loft-school-week-1
-
 ## Project setup
 ```
 npm install
