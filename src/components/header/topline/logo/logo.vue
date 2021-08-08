@@ -1,5 +1,5 @@
 <template>
-    <router-link to="/">
+    <router-link class="logo" to="/">
         <picture>
             <img src="../../../../assets/img/svg/logo.svg" alt="Gitogram">
         </picture>

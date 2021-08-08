@@ -1,7 +1,7 @@
 import { createStore } from 'vuex'
 
 import user from './modules/user'
-import repositories from './modules/repositories'
+import trandings from './modules/trandings'
 
 export default createStore({
   state: {
@@ -12,6 +12,6 @@ export default createStore({
   },
   modules: {
     user, 
-    repositories
+    trandings
   }
 })

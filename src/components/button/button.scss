@@ -1,8 +1,10 @@
 .primary {
-    width: 100%;
-    background-color: #31AE54;
-    padding: 14px 20px;
+    padding: 14px 23px;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #31AE54;
     color: #fff;
     border-radius: 5px;
 }

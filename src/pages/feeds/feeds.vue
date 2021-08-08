@@ -1,8 +1,16 @@
 <template>
     <section class="home-page">
+         <Header>
+            <template #topline>
+                <Topline />
+            </template>
+            <template #content>
+                <Content :users="users" />
+            </template>
+        </Header>
         <section class="users-feeds">
             <div class="container">
-                <feed
+                <Feed
                     v-for="feed in feeds"
                     :key="feed.id"
                     :feed="getFeedData(feed)"
@@ -11,18 +19,26 @@
                         <div class="feed-article">
                             <h2 class="feed-title">{{ feed.title }}</h2>
                             <p>{{ feed.description }}</p>
-                            <activity :starsCount="feed.stargazers_count" :forksCount="feed.forks_count" />
+                            <Activity :starsCount="feed.stargazers_count" :forksCount="feed.forks_count" />
                         </div>
                     </template>
-                </feed>
+                </Feed>
             </div>
         </section>
     </section>
 </template>
 
 <script>
-import feed from '@/components/feed/feed'
-import activity from '@/components/feed/activity/activity.vue'
+import Header from '@/components/header/header'
+import Topline from '@/components/header/topline/topline'
+import Content from '@/components/header/content/content'
+
+import users from '@/assets/json/users.json'
+
+
+
+import Feed from '@/components/feed/feed'
+import Activity from '@/components/feed/activity/activity.vue'
 
 import * as api from '../../api'
 
@@ -32,8 +48,11 @@ export default {
         feeds: []
     }),
     components: {
-        feed,
-        activity
+        Header,
+        Topline,
+        Content,
+        Feed,
+        Activity
     },
     methods: {
         getFeedData(feed) {
