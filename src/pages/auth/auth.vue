@@ -54,7 +54,7 @@ export default {
 
         if(code) {
             try {
-                const responce = await axios.post('http://localhost:8080', JSON.stringify({
+                const responce = await axios.post('https://lawrence658.github.io/gitogram/dist', JSON.stringify({
                     clientId: env.clientId,
                     code,
                     clientSicret: env.clientSicret
