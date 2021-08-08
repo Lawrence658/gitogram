@@ -1,4 +1,8 @@
 .feed-card {
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
     .feed-header {
         margin-bottom: 15px;
         display: flex;

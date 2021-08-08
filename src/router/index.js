@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Feeds from '../pages/Feeds.vue'
+import Feeds from '../pages//feeds/feeds.vue'
 
 const routes = [
     {

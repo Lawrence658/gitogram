@@ -1,13 +1,18 @@
 <template>
     <div class="feed-card">
         <div class="feed-header">
-            <Avatar username="username" width="44" height="44" />
+            <avatar
+                :username="feed.username"
+                :src="feed.avatarUrl"
+                width="44"
+                height="44"
+            />
         </div>
         <div class="feed-body">
             <slot name="article" />
         </div>
         <div class="feed-footer">
-            <Toggler @onClickToggler="onClickToggler" />
+            <toggler @onClickToggler="onClickToggler" />
             <div class="comments" v-show="isShowComments">
                 <div class="comment-item">
                     <span class="outher-username">joshua_l</span>
@@ -28,13 +33,18 @@
 </template>
 
 <script>
-import Avatar from '@/components/avatar/avatar'
-import Toggler from './toggler/toggler.vue'
+import * as api from '@/api'
+
+import avatar from '@/components/avatar/avatar'
+import toggler from './toggler/toggler.vue'
 
 export default {
+    props: {
+        feed: Object
+    },
     components: {
-        Avatar,
-        Toggler
+        avatar,
+        toggler
     },
     data: () => ({
         isShowComments: false
@@ -44,6 +54,9 @@ export default {
             console.log(payload)
             this.isShowComments = payload
         }
+    },
+    created () {
+        api.trandings.getTrandings()
     }
 }
 </script>

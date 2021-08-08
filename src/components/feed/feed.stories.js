@@ -1,16 +1,21 @@
 import feed from './feed.vue'
-import article from './article/article.vue'
+import activity from './activity/activity.vue'
+
 export default {
     title: 'feed',
-    components: { feed, article }
+    components: { feed, activity }
 }
 
 export const defaultView = () => ({
-    components: { feed, article },
+    components: { feed , activity},
     template: `
         <feed>
             <template #article>
-                <article />
+                <div class="feed-article">
+                    <h2 class="feed-title">Vue.js</h2>
+                    <p><b>JavaScript</b> framework for building interactive web applications ⚡</p>
+                    <activity />
+                </div>
             </template>
         </feed>
     `

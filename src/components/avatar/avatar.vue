@@ -19,9 +19,6 @@ export default {
             default: 'https://picsum.photos/200/200'
         },
         username: String
-    },
-    mounted() {
-        console.log(window.location)
     }
 }
 </script>

@@ -1,0 +1,33 @@
+.slide-card {
+    background: #f1f1f1;
+    border-radius: 8px;
+    .slide-header {
+        padding: 8px 8px 0 8px;
+    }
+    .slide-body {
+        max-height: 500px;
+        padding: 25px 18px;
+        border-top: 1px solid #CACACA;
+        border-bottom: 1px solid #CACACA;
+        overflow-y: auto;
+        .pic {
+            display: block;
+            margin-bottom: 25px;
+        }
+        .description {
+            p {
+                margin-bottom: 15px;
+                line-height: 1.5;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .slide-footer {
+        padding: 24px 52px 32px;
+    }
+    .avatar-component {
+        padding: 12px 0;
+    }
+}
