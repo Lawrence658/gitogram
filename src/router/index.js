@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Feeds from '../pages/feeds/feeds.vue'
 import Auth from '../pages/auth/auth.vue'
 
@@ -16,6 +16,7 @@ const routes = [
 ]
 
 const router = createRouter({
+    history: createWebHashHistory(),
     routes
 })
 

@@ -45,7 +45,8 @@ import * as api from '../../api'
 export default {
     name: 'Feeds',
     data: () => ({
-        feeds: []
+        feeds: [],
+        users
     }),
     components: {
         Header,
